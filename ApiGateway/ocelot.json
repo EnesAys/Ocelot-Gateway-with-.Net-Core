@@ -1,0 +1,25 @@
+{
+    "ReRoutes": [
+        {
+            "DownstreamPathTemplate": "/api/team",  
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts":[{
+                "Host":"localhost",
+                "Port":3000
+            }],                        
+            "UpstreamPathTemplate": "/team-service/team"             
+        },
+        {
+            "DownstreamPathTemplate": "/api/sport",  
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts":[{
+                "Host":"localhost",
+                "Port":2000
+            }],                        
+            "UpstreamPathTemplate": "/sport-service/sport"      
+        }
+    ],
+    "GlobalConfiguration": {
+        "BaseUrl": "http://localhost:1000"
+    }
+}
